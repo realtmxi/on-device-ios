@@ -1,4 +1,3 @@
-import coremltools as ct
 import joblib
 
 # Load the trained model
@@ -15,4 +14,12 @@ model_params = {
 with open('naive_bayes_params.json', 'w') as f:
     json.dump(model_params, f)
 
+# Load the vectorizer
+vectorizer = joblib.load('vectorizer.joblib')
+# Extract the vocabulary
+vocabulary = vectorizer.vocabulary_
+
+# Export the JSON
+with open('vocabulary.json', 'w') as f:
+    json.dump(vocabulary, f)
 
