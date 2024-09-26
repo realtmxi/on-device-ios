@@ -19,7 +19,7 @@ def assess_risk(sentence):
     return is_risk
 
 # Example sentence
-sentence = "Please email me at murphy@xiaohongshu.com."
+sentence = "hello world"
 is_risk_detected = assess_risk(sentence)
 
 print(f"Privacy Leak Risk Detected: {is_risk_detected}")
