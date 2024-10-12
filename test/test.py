@@ -3,8 +3,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 import numpy as np
 
 # Load the vectorizer and model
-vectorizer = joblib.load('vectorizer.joblib')
-model = joblib.load('naive_bayes_model.joblib')
+vectorizer = joblib.load('../src/vectorizer.joblib')
+model = joblib.load('../src/naive_bayes_model.joblib')
 
 def assess_risk(sentence):
     # Transform the input sentence to a feature vector
